@@ -11,5 +11,3 @@ World.add(engine.world, [ground]);
 
 Engine.run(engine);
 Render.run(renderer);
-
-Engine.run(engine);
