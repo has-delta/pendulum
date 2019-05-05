@@ -1,0 +1,30 @@
+{
+  "name": "pendulum",
+  "version": "1.0.0",
+  "description": "A pendulum simulation based on matter.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/has-delta/pendulum.git"
+  },
+  "keywords": [
+    "physics",
+    "physics-simulation",
+    "matter-js",
+    "javascript",
+    "typescript",
+    "has-delta",
+    "hana-academy-seoul",
+    "github-pages",
+    "web"
+  ],
+  "author": "has-delta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/has-delta/pendulum/issues"
+  },
+  "homepage": "https://github.com/has-delta/pendulum#readme"
+}
