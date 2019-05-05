@@ -10482,27 +10482,24 @@ var Vector = _dereq_('../geometry/Vector');
 },{"../body/Composite":2,"../core/Common":14,"../core/Events":16,"../geometry/Bounds":26,"../geometry/Vector":28}]},{},[30])(30)
 });
 
-},{}],"index.js":[function(require,module,exports) {
+},{}],"index.ts":[function(require,module,exports) {
 "use strict";
 
-var _matterJs = require("matter-js");
+exports.__esModule = true;
 
-var engine = _matterJs.Engine.create();
+var matter_js_1 = require("matter-js");
 
-var renderer = _matterJs.Render.create({
+var engine = matter_js_1.Engine.create();
+var renderer = matter_js_1.Render.create({
   element: document.body,
   engine: engine
 });
-
-var ground = _matterJs.Bodies.rectangle(400, 610, 810, 60, {
+var ground = matter_js_1.Bodies.rectangle(400, 610, 810, 60, {
   isStatic: true
 });
-
-_matterJs.World.add(engine.world, [ground]);
-
-_matterJs.Engine.run(engine);
-
-_matterJs.Render.run(renderer);
+matter_js_1.World.add(engine.world, [ground]);
+matter_js_1.Engine.run(engine);
+matter_js_1.Render.run(renderer);
 },{"matter-js":"node_modules/matter-js/build/matter.js"}],"../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -10531,7 +10528,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38121" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45279" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -10706,5 +10703,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/pendulum.e31bb0bc.js.map
+},{}]},{},["../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.ts"], null)
+//# sourceMappingURL=/pendulum.77de5100.js.map
