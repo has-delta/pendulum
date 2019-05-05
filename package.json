@@ -4,8 +4,8 @@
   "description": "A pendulum simulation based on matter.js",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --public-url /pendulum/",
+    "start": "./node_modules/.bin/parcel index.html",
+    "build": "./node_modules/.bin/parcel build index.html --public-url /pendulum/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,6 +33,7 @@
     "matter-js": "^0.14.2"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "parcel": "^1.12.3"
   }
 }
