@@ -10492,12 +10492,34 @@ var matter_js_1 = require("matter-js");
 var engine = matter_js_1.Engine.create();
 var renderer = matter_js_1.Render.create({
   element: document.body,
-  engine: engine
+  engine: engine,
+  options: {
+    wireframes: false
+  }
+});
+var mouse = matter_js_1.Mouse.create(renderer.canvas);
+var mouseConstraint = matter_js_1.MouseConstraint.create(engine, {
+  constraint: {
+    render: {
+      visible: false
+    }
+  },
+  mouse: mouse
 });
 var ground = matter_js_1.Bodies.rectangle(400, 610, 810, 60, {
   isStatic: true
 });
-matter_js_1.World.add(engine.world, [ground]);
+var pendulum = matter_js_1.Bodies.circle(400, 400, 50);
+var string = matter_js_1.Constraint.create({
+  pointA: {
+    x: 400,
+    y: 0
+  },
+  bodyB: pendulum
+});
+matter_js_1.World.add(engine.world, [ground, pendulum]);
+matter_js_1.World.add(engine.world, mouseConstraint);
+matter_js_1.World.add(engine.world, string);
 matter_js_1.Engine.run(engine);
 matter_js_1.Render.run(renderer);
 },{"matter-js":"node_modules/matter-js/build/matter.js"}],"../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -10528,7 +10550,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45279" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44033" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
