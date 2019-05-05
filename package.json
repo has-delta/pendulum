@@ -31,5 +31,8 @@
   "homepage": "https://github.com/has-delta/pendulum#readme",
   "dependencies": {
     "matter-js": "^0.14.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
