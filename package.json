@@ -4,6 +4,8 @@
   "description": "A pendulum simulation based on matter.js",
   "main": "index.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url /pendulum/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
