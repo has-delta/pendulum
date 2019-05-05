@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/has-delta/pendulum/issues"
   },
-  "homepage": "https://github.com/has-delta/pendulum#readme"
+  "homepage": "https://github.com/has-delta/pendulum#readme",
+  "dependencies": {
+    "matter-js": "^0.14.2"
+  }
 }
